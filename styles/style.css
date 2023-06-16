@@ -1,0 +1,201 @@
+@font-face {
+    font-family: "Select-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/IBMPlexSerif-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Dancing-Italic";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/PlayfairDisplay-Italic.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alegreya-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/AlegreyaSans-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-display: swap;
+}
+
+
+body {
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    line-height: 24px;
+    
+}
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(232, 225, 141), rgb(145, 224, 66));
+    padding: 20px;
+    width: 920px;
+    margin: 0 auto;
+}
+
+.img-about {
+    display: grid;
+    grid-template-columns: 400px auto;
+}
+
+.img-about__image-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.img-about__image {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgb(60, 60, 60);
+}
+
+.img-about__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-about__text--one {
+    font-family: "Select-Regular";
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.img-about__text--two {
+    font-family: "Dancing-Italic";
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.skills {
+    display: flex;
+}
+
+.skills__list .skills__item {
+    position: relative;
+}
+
+.skills__item:before {
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(208, 45, 137);
+    display: block;
+    width: 880px;
+    top: 125px;
+}
+
+.internal-list-first:before {
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(208, 45, 137);
+    display: block;
+    width: 880px;
+    top: 260px;
+}
+
+.internal-list-second:before {
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(208, 45, 137);
+    display: block;
+    width: 880px;
+    top: 210px;
+}
+
+.icon {
+    margin-left: 5px;
+}
+
+.skills__item--heading {
+    font-family: "Alegreya-Regular";
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.skills__item--text {
+    font-family: "Roboto-Regular";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.skills__item {
+    font-family: "Dancing-Italic";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.click-btn {
+    width: 150px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 5px;
+    color: rgb(44, 40, 40);
+    margin: 10px auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgb(53, 51, 51);
+    user-select: none;
+}
+
+.click-btn:hover {
+    background-color: rgb(39, 240, 240);
+}
+
+.click-btn:active {
+    background-color: rgb(83, 237, 237);
+    scale: 0.9;
+    transition: 0.7s;
+}
+
+@media screen and (max-width: 640px) {
+    .body-wrapper {
+        width: 640px;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(45deg, rgb(232, 225, 141), rgb(145, 224, 66));
+    }
+
+    .img-about {
+        display: flex;
+        margin-left: 30px;
+    }
+
+    .img-about__image-wrapper {
+        display: none;
+    }
+
+    .skills__item:before {
+        width: 585px;
+        top: 150px;
+    }
+
+    .internal-list-first:before {
+        width: 585px;
+        top: 260px;
+    }
+    
+    .internal-list-second:before {
+        width: 585px;
+        top: 210px;
+    }
+}
+
+/* @media screen and (min-width: 960px) {
+    .body-wrapper {
+        background: linear-gradient(45deg, rgb(232, 225, 141), rgb(145, 224, 66));
+    }
+} */
